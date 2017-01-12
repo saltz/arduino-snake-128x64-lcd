@@ -87,7 +87,9 @@ namespace oit_toets3_snake
             }
             else
             {
-                textBox2.Text = message;
+                listBox1.Items.Add(message);
+                listBox1.SelectedIndex = listBox1.Items.Count - 1;
+                listBox1.SelectedIndex = -1;
             }
         }
         private int getParamValue(string message)
@@ -108,7 +110,22 @@ namespace oit_toets3_snake
 
         private void button1_Click(object sender, EventArgs e)
         {
-            serialMessenger.SendMessage(textBox1.Text);
+            serialMessenger.SendMessage("MOVE_UP");
+        }
+
+        private void btnDown_Click(object sender, EventArgs e)
+        {
+            serialMessenger.SendMessage("MOVE_DOWN");
+        }
+
+        private void btnLeft_Click(object sender, EventArgs e)
+        {
+            serialMessenger.SendMessage("MOVE_LEFT");
+        }
+
+        private void btnRight_Click(object sender, EventArgs e)
+        {
+            serialMessenger.SendMessage("MOVE_RIGHT");
         }
     }
 }

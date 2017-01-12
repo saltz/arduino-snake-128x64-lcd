@@ -30,13 +30,15 @@
         {
             this.btnConnect = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnPcControl = new System.Windows.Forms.Button();
+            this.lbControl = new System.Windows.Forms.Label();
             this.btnDisconnect = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.lbControl = new System.Windows.Forms.Label();
-            this.btnPcControl = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnUp = new System.Windows.Forms.Button();
+            this.btnDown = new System.Windows.Forms.Button();
+            this.btnLeft = new System.Windows.Forms.Button();
+            this.btnRight = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +65,26 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
+            // btnPcControl
+            // 
+            this.btnPcControl.Location = new System.Drawing.Point(105, 25);
+            this.btnPcControl.Name = "btnPcControl";
+            this.btnPcControl.Size = new System.Drawing.Size(113, 36);
+            this.btnPcControl.TabIndex = 4;
+            this.btnPcControl.Text = "Control From PC";
+            this.btnPcControl.UseVisualStyleBackColor = true;
+            this.btnPcControl.Click += new System.EventHandler(this.btnPcControl_Click);
+            // 
+            // lbControl
+            // 
+            this.lbControl.AutoSize = true;
+            this.lbControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbControl.Location = new System.Drawing.Point(307, 32);
+            this.lbControl.Name = "lbControl";
+            this.lbControl.Size = new System.Drawing.Size(15, 20);
+            this.lbControl.TabIndex = 3;
+            this.lbControl.Text = "-";
+            // 
             // btnDisconnect
             // 
             this.btnDisconnect.Location = new System.Drawing.Point(6, 49);
@@ -82,67 +104,70 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "is in control:";
             // 
-            // lbControl
+            // btnUp
             // 
-            this.lbControl.AutoSize = true;
-            this.lbControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbControl.Location = new System.Drawing.Point(307, 32);
-            this.lbControl.Name = "lbControl";
-            this.lbControl.Size = new System.Drawing.Size(57, 20);
-            this.lbControl.TabIndex = 3;
-            this.lbControl.Text = "label2";
+            this.btnUp.Location = new System.Drawing.Point(155, 156);
+            this.btnUp.Name = "btnUp";
+            this.btnUp.Size = new System.Drawing.Size(75, 23);
+            this.btnUp.TabIndex = 3;
+            this.btnUp.Text = "up";
+            this.btnUp.UseVisualStyleBackColor = true;
+            this.btnUp.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnPcControl
+            // btnDown
             // 
-            this.btnPcControl.Location = new System.Drawing.Point(105, 25);
-            this.btnPcControl.Name = "btnPcControl";
-            this.btnPcControl.Size = new System.Drawing.Size(113, 36);
-            this.btnPcControl.TabIndex = 4;
-            this.btnPcControl.Text = "Control From PC";
-            this.btnPcControl.UseVisualStyleBackColor = true;
-            this.btnPcControl.Click += new System.EventHandler(this.btnPcControl_Click);
+            this.btnDown.Location = new System.Drawing.Point(155, 185);
+            this.btnDown.Name = "btnDown";
+            this.btnDown.Size = new System.Drawing.Size(75, 23);
+            this.btnDown.TabIndex = 4;
+            this.btnDown.Text = "down";
+            this.btnDown.UseVisualStyleBackColor = true;
+            this.btnDown.Click += new System.EventHandler(this.btnDown_Click);
             // 
-            // textBox1
+            // btnLeft
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 100);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(118, 20);
-            this.textBox1.TabIndex = 2;
+            this.btnLeft.Location = new System.Drawing.Point(74, 172);
+            this.btnLeft.Name = "btnLeft";
+            this.btnLeft.Size = new System.Drawing.Size(75, 23);
+            this.btnLeft.TabIndex = 5;
+            this.btnLeft.Text = "left";
+            this.btnLeft.UseVisualStyleBackColor = true;
+            this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
             // 
-            // button1
+            // btnRight
             // 
-            this.button1.Location = new System.Drawing.Point(136, 98);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnRight.Location = new System.Drawing.Point(236, 172);
+            this.btnRight.Name = "btnRight";
+            this.btnRight.Size = new System.Drawing.Size(75, 23);
+            this.btnRight.TabIndex = 6;
+            this.btnRight.Text = "right";
+            this.btnRight.UseVisualStyleBackColor = true;
+            this.btnRight.Click += new System.EventHandler(this.btnRight_Click);
             // 
-            // textBox2
+            // listBox1
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 138);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(308, 228);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.Text = "s";
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(72, 253);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(239, 95);
+            this.listBox1.TabIndex = 7;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(409, 395);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.btnRight);
+            this.Controls.Add(this.btnLeft);
+            this.Controls.Add(this.btnDown);
+            this.Controls.Add(this.btnUp);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -154,9 +179,11 @@
         private System.Windows.Forms.Label lbControl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnPcControl;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnUp;
+        private System.Windows.Forms.Button btnDown;
+        private System.Windows.Forms.Button btnLeft;
+        private System.Windows.Forms.Button btnRight;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 
