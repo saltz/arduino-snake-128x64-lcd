@@ -21,7 +21,7 @@ namespace oit_toets3_snake
         {
             InitializeComponent();
             MessageBuilder messageBuilder = new MessageBuilder('#', '%');
-            serialMessenger = new SerialMessenger("COM5", 9600, messageBuilder);
+            serialMessenger = new SerialMessenger("COM5", 115200, messageBuilder);
 
             readMessageTimer = new Timer();
             readMessageTimer.Interval = 10;
